@@ -54,21 +54,50 @@ Table of Contents
 |                 |             |            |           
 
 ## 1. Introduction
-> This section should provide an overview of the entire document
 
 ### 1.1 Document Purpose
-Describe the purpose of the SRS and its intended audience.
+
+The purpose of this Software Requirements Specification (SRS) document is to define and outline the functional and non-functional requirements for the "ProjectSO" software system. This document serves as a communication tool for all stakeholders, including project managers, developers, and clients, ensuring a common understanding of the system's objectives and scope. It provides a reference for development, validation, and change management, facilitating a clear and efficient software development process.
 
 ### 1.2 Product Scope
-Identify the product whose software requirements are specified in this document, including the revision or release number. Explain what the product that is covered by this SRS will do, particularly if this SRS describes only part of the system or a single subsystem. Provide a short description of the software being specified and its purpose, including relevant benefits, objectives, and goals. Relate the software to corporate goals or business strategies. If a separate vision and scope document is available, refer to it rather than duplicating its contents here.
+The product is an Internet Shop that features a user-friendly website and a desktop application, designed to facilitate online shopping and enhance the customer experience. Key functionalities include:
+
+* Product Catalog: A comprehensive display of available products, with detailed descriptions, pricing, and images.
+* Shopping Cart: A feature allowing users to add, remove, and modify products before checkout.
+* Order Management: Users can track their purchase delivery in real-time via an integrated live map feature, providing updates on the delivery status and estimated arrival times.
+* Salesforce Integration: The system connects with Salesforce through an API, ensuring seamless management of customer data, order processing, and inventory tracking.
+* User Accounts: Customers can create and manage their accounts to view order history, manage payment methods, and save preferences.
+
+The scope of this project does not include features such as in-store pickup or third-party marketplace integrations. The focus is on delivering a robust online shopping experience with efficient order tracking and management capabilities.
 
 ### 1.3 Definitions, Acronyms and Abbreviations
 
+* API: Application Programming Interface - A set of rules and protocols for building and interacting with software applications, allowing different systems to communicate with each other.
+* CRM: Customer Relationship Management - A technology for managing a company's relationships and interactions with potential and current customers.
+* UI: User Interface - The means by which a user interacts with a computer or application, encompassing layout, design, and usability.
+* SRS: Software Requirements Specification - A document that specifies the requirements of a software system, serving as a guide for development and validation.
+* SKU: Stock Keeping Unit - A unique identifier for each distinct product and service that can be purchased.
+* Live Map: A real-time mapping feature that provides users with current location tracking and delivery updates.
+* User Account: A personalized profile created by customers to manage their shopping preferences, order history, and payment methods.
+
 ### 1.4 References
-List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
+
+* IEEE Standard for Software Requirements Specifications - IEEE Std 830-1998.
+* [Salesforce API Documentation - Salesforce Developer Documentation, Salesforce API Overview.](https://developer.salesforce.com/docs/apis)
+* [User Interface Design Guidelines: 10 Rules of Thumb.](https://www.interaction-design.org/literature/article/user-interface-design-guidelines-10-rules-of-thumb)
+* [LWC Documentation.](https://developer.salesforce.com/docs/platform/lwc/guide/get-started-component-library.html)
+* [Criteria for the Internet Shop System](https://ecommerceinstitut.de/criteria-internet-shop-system/)
 
 ### 1.5 Document Overview
-Describe what the rest of the document contains and how it is organized.
+This Software Requirements Specification (SRS) document outlines the requirements for the Internet Shop software system. It is structured to provide a clear understanding of the system's functionalities, scope, and interfaces.
+
+* Introduction - Provides the purpose, scope, definitions, acronyms, and references related to the project.
+* Product Overview - Describes the product perspective, key features, user classes, and operating environment.
+* Requirements - Details the functional and non-functional requirements of the system.
+* Verification - The verification process ensures that the software system meets the specified requirements outlined in this document.
+* Appendices - Contains supporting information and a glossary of terms used in the document.
+
+This structure aims to facilitate a comprehensive understanding of the system, ensuring that all stakeholders are aligned on the project objectives and requirements.
 
 ## 2. Product Overview
 > This section should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3, and makes them easier to understand.
