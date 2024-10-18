@@ -53,7 +53,8 @@ Table of Contents
 | Name            | Date        |  Version   |
 | --------------- | ----------- |  --------- |
 | Stepan Halaiko  | 16.10.2024  |  1.0       |
-|                 |             |            |
+| Oles Pankiv     | 17.10.2024  |  1.1       |
+| Stepan Halaiko  | 18.10.2024  |  1.2       |
 |                 |             |            |
 
 ## 1. Introduction
