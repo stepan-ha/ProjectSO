@@ -22,7 +22,6 @@ Table of Contents
   * 2.3 [Product Constraints](#23-product-constraints)
   * 2.4 [User Characteristics](#24-user-characteristics)
   * 2.5 [Assumptions and Dependencies](#25-assumptions-and-dependencies)
-  * 2.6 [Apportioning of Requirements](#26-apportioning-of-requirements)
 * 3 [Requirements](#3-requirements)
   * 3.1 [Actors](#31-actors)
     * 3.1.1 [User](#311-user)
@@ -107,29 +106,184 @@ This structure aims to facilitate a comprehensive understanding of the system, e
 ## 2. Product Overview
 
 ### 2.1 Product Perspective
-Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
+The Internet Shop system specified in this SRS is a new, self-contained product designed to provide an enhanced online shopping experience. It is not part of an existing product family, but rather a stand-alone solution aimed at integrating modern e-commerce functionalities with robust order tracking capabilities.
+
+The product consists of two main components:
+
+* Web Application: The online storefront where customers can browse products, place orders, and manage their accounts. It includes features such as a product catalog, shopping cart, and live order tracking via an integrated map.
+* Desktop and Tablet application for Delivery purpose. Fast Update, data sync and offline access to usefull data in essential for that job.
+
+The Internet Shop system integrates with Salesforce through an API, allowing seamless data flow between the web application, desktop application, and Salesforce CRM. This integration ensures that customer data, order details, and inventory updates are consistent across all platforms. Additionally, the system connects to a Map API to enable real-time order tracking for users.
 
 ### 2.2 Product Functions
-Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.
+
+The Internet Shop system is designed to deliver a smooth and efficient online shopping experience, along with backend tools for managing orders, inventory, and customer interactions. The major functions of the system are:
+
+#### Product Catalog Management:
+
+* Display product listings with detailed descriptions, images, and prices.
+* Support search, filtering, and sorting for easy product discovery.
+
+#### User Account Management:
+
+* Allow users to create and manage their accounts, view order history, and save payment methods.
+* Provide secure authentication and profile management features.
+
+#### Shopping Cart and Checkout:
+
+* Enable users to add, remove, and modify items in their shopping cart.
+* Facilitate a streamlined checkout process, including payment and order confirmation.
+
+#### Order Tracking:
+
+* Provide real-time order tracking, showing the current location of deliveries on a live map.
+* Notify users of updates regarding their orders’ status.
+
+#### Salesforce Integration:
+
+* Sync customer data, orders, and inventory between the web application, desktop application, and Salesforce CRM.
+* Automate the process of order updates and inventory adjustments.
+
+#### Administrative Functions (Desktop Application):
+
+* Manage inventory, including adding new products, updating stock levels, and handling promotions.
+* Access customer information, process returns, and manage support requests.
+
+#### Analytics and Reporting:
+
+* Generate reports on sales, customer behavior, and inventory levels.
+* Provide insights into operational performance to aid business decision-making.
 
 ### 2.3 Product Constraints
-This subsection should provide a general description of any other items that will limit the developer’s options. These may include:
 
-* Interfaces to users, other applications or hardware.
-* Quality of service constraints.
-* Standards compliance.
-* Constraints around design or implementation.
+#### 1. Interfaces
+User Interface:
+
+* The web application must be responsive and compatible with modern web browsers (Chrome, Firefox).
+* The desktop and tablet application must function seamlessly across Windows, Android operating systems.
+
+External Integration:
+
+* The system must integrate with Salesforce via its API to ensure real-time data synchronization.
+* Real-time order tracking must utilize a Map API, requiring compliance with the specific API standards and usage limits.
+
+#### 2. Quality of Service Constraints
+Performance:
+* The system must handle up to 100 concurrent users without performance degradation.
+* Response times for key operations (loading the product catalog, placing orders) must not exceed 5 seconds.
+
+Availability:
+
+* The system should have an uptime of at least 99.5%, ensuring reliability and continuous service.
+
+Security:
+
+* All customer data must be securely stored and comply with data protection regulations.
+* The system should use secure authentication mechanisms to protect user accounts.
+
+#### 3. Standards Compliance
+
+Development Standards:
+
+* The system must adhere to coding standards and best practices (SOLID principles for OOP).
+
+Web Standards:
+
+* The web application must follow W3C guidelines for accessibility to ensure usability for all users, including those with disabilities.
+
+#### 4. Design and Implementation Constraints
+
+Platform Dependency:
+
+* The web application must be developed using LWR Framework for ease of integration and maintenance for Salesforce web applications.
+* The desktop application should be built using .NET to ensure compatibility across target platforms.
+
+Scalability:
+
+* The system must be designed to support future expansions, such as adding new features or handling larger volumes of transactions.
+
+Third-Party Services:
+
+* Dependency on external services (e.g., payment gateways, map providers) must be managed carefully to ensure seamless integration and minimal disruptions.
 
 ### 2.4 User Characteristics
-Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.
+
+1. Customers
+
+* Description: End-users who browse the product catalog, make purchases, and track orders.
+* Characteristics:
+   ** Varying levels of technical expertise, from beginners to experienced online shoppers.
+   ** Require a user-friendly, intuitive interface for easy navigation and checkout.
+   ** Access to core features such as product search, shopping cart, order tracking, and account management.
+
+* Frequency of Use: Occasional to frequent, depending on their shopping habits.
+* Importance: High - ensuring a smooth and satisfying user experience for customers is critical to the system’s success.
+
+2. Courier
+
+* Description: Internal users responsible for order delivery.
+* Characteristics:
+** Familiar with the product order queue managment.
+** Need tools for handling order status update.
+* Frequency of Use: Occasional to frequent, depending on order queue load.
+* Importance: High - delivery is one of the key performance metrics for the product.
+
+3. System Administrator
+
+* Description: Technical users who manage system configurations, handle integration, and maintain system security.
+* Characteristics:
+** High level of technical expertise, including knowledge of APIs, database management, and security protocols.
+** Responsible for ensuring system availability, troubleshooting issues, and maintaining integrations (e.g., Salesforce, Map API).
+** Manage user roles and permissions to ensure appropriate access levels.
+* Frequency of Use: As needed, typically more frequent during setup and maintenance periods.
+* Importance: Medium - essential for system upkeep and smooth operation.
+
 
 ### 2.5 Assumptions and Dependencies
-List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).
 
-### 2.6 Apportioning of Requirements
-Apportion the software requirements to software elements. For requirements that will require implementation over multiple software elements, or when allocation to a software element is initially undefined, this should be so stated. A cross reference table by function and software element should be used to summarize the apportioning.
 
-Identify requirements that may be delayed until future versions of the system (e.g., blocks and/or increments).
+1. Assumptions
+
+* User Accessibility:
+
+** It is assumed that customers have stable internet connections to access the web application without issues.
+** Customers will use modern web browsers that support the latest web standards (e.g., HTML5, CSS3, JavaScript ES6+).
+
+* System Integration:
+
+** The Salesforce CRM and desktop application APIs will be available and reliable, ensuring seamless data synchronization.
+** The Map API service will remain accessible and will support real-time tracking functionalities as required.
+
+* Scalability:
+
+* The system is expected to handle the anticipated load of users and transactions. Any significant increase beyond projections will require additional resources and potential system scaling.
+* It is assumed that the server infrastructure will support the required performance benchmarks for handling concurrent users.
+
+* Data Security:
+
+** The system will comply with relevant data protection laws (e.g., GDPR, CCPA), and no significant changes in these regulations will necessitate major adjustments to the software.
+
+* Development Environment:
+
+** Developers will have access to the necessary tools, frameworks, and technologies to build and maintain the system.
+** The project timeline assumes no major disruptions to the development process (e.g., changes in team structure, delays in acquiring resources).
+
+2. Dependencies
+
+* Third-Party Services:
+
+** The system depends on external services, such as payment gateways and the Map API, for certain functionalities. ** Availability, pricing, and performance of these services may impact the project.
+** Integration with Salesforce relies on the stability and backward compatibility of the Salesforce API.
+
+* Software Components:
+
+** The web application depends on certain open-source libraries and frameworks (e.g., React, Node.js) that must remain stable and supported. Any major changes in these components could require updates to the system.
+** The desktop application depends on frameworks like Electron or .NET, and updates to these platforms may necessitate maintenance or code adjustments.
+
+* Infrastructure:
+
+** The system relies on cloud-based hosting services (e.g., AWS, Azure) to ensure high availability, security, and scalability. Any issues with these services could directly affect system performance.
+** Backup and disaster recovery systems are assumed to be in place and operational, ensuring minimal data loss and quick recovery in case of incidents.
 
 ## 3. Requirements
 
