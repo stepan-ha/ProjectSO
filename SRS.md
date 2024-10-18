@@ -212,9 +212,9 @@ Third-Party Services:
 
 * Description: End-users who browse the product catalog, make purchases, and track orders.
 * Characteristics:
-   ** Varying levels of technical expertise, from beginners to experienced online shoppers.
-   ** Require a user-friendly, intuitive interface for easy navigation and checkout.
-   ** Access to core features such as product search, shopping cart, order tracking, and account management.
+   * Varying levels of technical expertise, from beginners to experienced online shoppers.
+   * Require a user-friendly, intuitive interface for easy navigation and checkout.
+   * Access to core features such as product search, shopping cart, order tracking, and account management.
 
 * Frequency of Use: Occasional to frequent, depending on their shopping habits.
 * Importance: High - ensuring a smooth and satisfying user experience for customers is critical to the system’s success.
@@ -223,8 +223,10 @@ Third-Party Services:
 
 * Description: Internal users responsible for order delivery.
 * Characteristics:
-** Familiar with the product order queue managment.
-** Need tools for handling order status update.
+
+ * Familiar with the product order queue managment.
+ * Need tools for handling order status update.
+
 * Frequency of Use: Occasional to frequent, depending on order queue load.
 * Importance: High - delivery is one of the key performance metrics for the product.
 
