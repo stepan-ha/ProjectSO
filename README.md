@@ -164,7 +164,55 @@ Describe the logical and physical characteristics of each interface between the 
 Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
 
 ### 3.2 Functional
-> This section specifies the requirements of functional effects that the software-to-be is to have on its environment.
+
+The following table summarizes the functional requirements for the ProjectSO shop web application.
+
+| Req. No.     | Title               | Description                                 |
+| ------------ | ------------------- | ------------------------------------------- |
+| PrSO-FR1     | **Product list**    |                                             |
+| PrSO-FR1.1   | List products       | Retrive products from the database and return them to the user |
+| PrSO-FR1.2   | Search products     | Search products by a text query             |
+| PrSO-FR1.3   | Filter products     | Filter products by criteria (category, price range, color, etc.) |
+|              |                     |                                             |
+| PrSO-FR2     | **Cart**            |                                             |
+| PrSO-FR2.1   | Cart                | Implemen basic cart functionality: add/delete item, change item amount, calculate final price. |
+| PrSO-FR2.2   | Preserve cart contents | Store cart items between web sessions. Preserve cart contents after user closes browser tab. |
+|              |                     |                                             |
+| PrSO-FR3     | **User account**    |                                             |
+| PrSO-FR3.1   | Login               | Authenticate user through his email+password combination. |
+| PrSO-FR3.2   | Forgot password     | Make it possible for the user to change his password when he forgot it. |
+| PrSO-FR3.3   | Register account    | Allow the user to create an account using his email as identification method. |
+| PrSO-FR3.4   | Email verification  | Verify email validity. The system needs to make sure that the email is real and the user is able to receive emails from the system. |
+| PrSO-FR3.6   | Modify personal data | Allow the user to modify his personal data (phone number, email, First/Last name, date of birth, etc.) |
+| PrSO-FR3.7   | Change password     | Allow the user to change his password.      |
+| PrSO-FR3.8   | Delete account and data | Delete account and any personal data that is linked to this account. |
+|              |                     |                                             |
+| PrSO-FR4     | **Order** |                                                       |
+| PrSO-FR4.1   | Create order        | Create order based on the cart's content and pass it to the manager/admin for further processing |
+| PrSO-FR4.2   | Cancel order        | Allow the user to cancel his order          |
+| PrSO-FR4.3   | Show orders         | List in-progress and completed orders. |
+| PrSO-FR4.4   | Tracking            | Display tracking information of the order. Show it's current location and show destication point. |
+|              |                     |                                             |
+| PrSO-FR5     | **Product management** |                                          |
+| PrSO-FR5.1   | Manage products     | Create/update/delete products, assign category, change the amount in stock |
+| PrSO-FR5.2   | Manage categories   | Create/update/delete product categories     |
+|              |                     |                                             |
+| PrSO-FR6     | **Order management** |                                            |
+| PrSO-FR6.1   | Handle user order   | Accept/decline order, change its progress   |
+|              |                     |                                             |
+| PrSO-FR7     | **Courier management** |                                          |
+| PrSO-FR7.1   | Manage couriers     | Create/delete couriers.                     |
+| PrSO-FR7.1   | Courier arbitration | The system should analyze the current active couriers and evenly distribute load between them. |
+
+The following table summarizes the functional requirements for the ProjectSO courier mobile application.
+
+| Req. No.       | Title               | Description                                 |
+| -------------- | ------------------- | ------------------------------------------- |
+| PrSO-C-FR1     | **User account**    |                                             |
+| PrSO-C-FR1.1   | Login               | Authenticate courier through his email+password combination |
+| PrSO-C-FR1.2   | Forgot password     | Make it possible for the courier to change his password when he forgot it |
+| PrSO-C-FR1.3   | Receive delivery request | The courier should receive delivery task with details about pick-up point and delivery address |
+| PrSO-C-FR1.4   | Track courier location | The system should actively collect the couriers location and store it in the system in order to report the status to the user. |
 
 ### 3.3 Quality of Service
 > This section states additional, quality-related property requirements that the functional effects of the software should present.
