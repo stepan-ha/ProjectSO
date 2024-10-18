@@ -23,10 +23,10 @@ Table of Contents
   * 2.5 [Assumptions and Dependencies](#25-assumptions-and-dependencies)
   * 2.6 [Apportioning of Requirements](#26-apportioning-of-requirements)
 * 3 [Requirements](#3-requirements)
-  * 3.1 [External Interfaces](#31-external-interfaces)
-    * 3.1.1 [User Interfaces](#311-user-interfaces)
-    * 3.1.2 [Hardware Interfaces](#312-hardware-interfaces)
-    * 3.1.3 [Software Interfaces](#313-software-interfaces)
+  * 3.1 [Actors](#31-actors)
+    * 3.1.1 [User](#311-user)
+    * 3.1.2 [Admin](#312-admin)
+    * 3.1.3 [Courier](#313-courier)
   * 3.2 [Functional](#32-functional)
   * 3.3 [Quality of Service](#33-quality-of-service)
     * 3.3.1 [Performance](#331-performance)
@@ -43,7 +43,7 @@ Table of Contents
     * 3.5.6 [Cost](#356-cost)
     * 3.5.7 [Deadline](#357-deadline)
     * 3.5.8 [Proof of Concept](#358-proof-of-concept)
-  * 3.6 [Non-functional](#36-non-functional)
+  * 3.6 [Non-functional](#36-non-functional-requirements)
     * 3.6.1 [System requirements](#361-system-requirements)
     * 3.6.2 [Security requirements](#362-security-requirements)
 * 4 [Verification](#4-verification)
@@ -141,30 +141,22 @@ Identify requirements that may be delayed until future versions of the system (e
 * Be verifiable (e.g., the requirement realization can be proven to the customer's satisfaction)
 * Conform to agreed upon syntax, keywords, and terms.
 
-### 3.1 External Interfaces
-> This subsection defines all the inputs into and outputs requirements of the software system. Each interface defined may include the following content:
-* Name of item
-* Source of input or destination of output
-* Valid range, accuracy, and/or tolerance
-* Units of measure
-* Timing
-* Relationships to other inputs/outputs
-* Screen formats/organization
-* Window formats/organization
-* Data formats
-* Command formats
-* End messages
+### 3.1 Actors
 
-#### 3.1.1 User interfaces
-Define the software components for which a user interface is needed. Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Details of the user interface design should be documented in a separate user interface specification.
+An actor is anything that exchanges data with the system. An actor can be a user, external hardware, or another system. The following are identified actors on the system.
 
-Could be further divided into Usability and Convenience requirements.
+#### 3.1.1 User
 
-#### 3.1.2 Hardware interfaces
-Describe the logical and physical characteristics of each interface between the software product and the hardware components of the system. This may include the supported device types, the nature of the data and control interactions between the software and the hardware, and communication protocols to be used.
+The User is the customer of the shop and he is searching products, selecting them and making an order. Also the user check the order status and track it's delivery.
 
-#### 3.1.3 Software interfaces
-Describe the connections between this product and other specific software components (name and version), including databases, operating systems, tools, libraries, and integrated commercial components. Identify the data items or messages coming into the system and going out and describe the purpose of each. Describe the services needed and the nature of communications. Refer to documents that describe detailed application programming interface protocols. Identify data that will be shared across software components. If the data sharing mechanism must be implemented in a specific way (for example, use of a global data area in a multitasking operating system), specify this as an implementation constraint.
+#### 3.1.2 Admin
+
+The Administrator has full access to the application. His role is to manage the products database, handle user orders, resolve any conflicts/issues the user might have and manage couriers.
+
+#### 3.1.3 Courier
+
+The Courier is responsible for order delivery. He is responsible for monitoring his application for new order norifications, accepts the orders and deliver them.
+
 
 ### 3.2 Functional
 
@@ -299,7 +291,7 @@ The following user security levels are required:
 | Req. No.     | Title               | Description                                 |
 | ------------ | ------------------- | ------------------------------------------- |
 | PrSO-SEC1    | User                | View product list; search/filter products; add products to cart; modify cart; make a purchase; monitor order status and tracking; |
-| PrSO-SEC2    | Manager             | View product list; modify product information and mount; accept/decline orders; manage couriers; |
+| PrSO-SEC2    | Admin               | View product list; modify product information and mount; accept/decline orders; manage couriers; |
 | PrSO-SEC2    | Courier             | Receive delivery tasks; complete delivery;  |
 
 ## 4. Verification
