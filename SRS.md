@@ -2,6 +2,7 @@
 ## For ProjectSO
 
 Version 1.2
+
 Prepared by Stepan Halaiko & Oles Pankiv
 
 16.10.2024
