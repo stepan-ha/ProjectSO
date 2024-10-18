@@ -43,6 +43,9 @@ Table of Contents
     * 3.5.6 [Cost](#356-cost)
     * 3.5.7 [Deadline](#357-deadline)
     * 3.5.8 [Proof of Concept](#358-proof-of-concept)
+  * 3.6 [Non-functional](#36-non-functional)
+    * 3.6.1 [System requirements](#361-system-requirements)
+    * 3.6.2 [Security requirements](#362-security-requirements)
 * 4 [Verification](#4-verification)
 * 5 [Appendixes](#5-appendixes)
 
@@ -175,23 +178,23 @@ The following table summarizes the functional requirements for the ProjectSO sho
 | PrSO-FR1.3   | Filter products     | Filter products by criteria (category, price range, color, etc.) |
 |              |                     |                                             |
 | PrSO-FR2     | **Cart**            |                                             |
-| PrSO-FR2.1   | Cart                | Implemen basic cart functionality: add/delete item, change item amount, calculate final price. |
-| PrSO-FR2.2   | Preserve cart contents | Store cart items between web sessions. Preserve cart contents after user closes browser tab. |
+| PrSO-FR2.1   | Cart                | Implemen basic cart functionality: add/delete item, change item amount, calculate final price |
+| PrSO-FR2.2   | Preserve cart contents | Store cart items between web sessions. Preserve cart contents after user closes browser tab |
 |              |                     |                                             |
 | PrSO-FR3     | **User account**    |                                             |
-| PrSO-FR3.1   | Login               | Authenticate user through his email+password combination. |
-| PrSO-FR3.2   | Forgot password     | Make it possible for the user to change his password when he forgot it. |
-| PrSO-FR3.3   | Register account    | Allow the user to create an account using his email as identification method. |
-| PrSO-FR3.4   | Email verification  | Verify email validity. The system needs to make sure that the email is real and the user is able to receive emails from the system. |
+| PrSO-FR3.1   | Login               | Authenticate user through his email+password combination |
+| PrSO-FR3.2   | Forgot password     | Make it possible for the user to change his password when he forgot it |
+| PrSO-FR3.3   | Register account    | Allow the user to create an account using his email as identification method |
+| PrSO-FR3.4   | Email verification  | Verify email validity. The system needs to make sure that the email is real and the user is able to receive emails from the system |
 | PrSO-FR3.6   | Modify personal data | Allow the user to modify his personal data (phone number, email, First/Last name, date of birth, etc.) |
-| PrSO-FR3.7   | Change password     | Allow the user to change his password.      |
-| PrSO-FR3.8   | Delete account and data | Delete account and any personal data that is linked to this account. |
+| PrSO-FR3.7   | Change password     | Allow the user to change his password       |
+| PrSO-FR3.8   | Delete account and data | Delete account and any personal data that is linked to this account |
 |              |                     |                                             |
 | PrSO-FR4     | **Order** |                                                       |
 | PrSO-FR4.1   | Create order        | Create order based on the cart's content and pass it to the manager/admin for further processing |
 | PrSO-FR4.2   | Cancel order        | Allow the user to cancel his order          |
-| PrSO-FR4.3   | Show orders         | List in-progress and completed orders. |
-| PrSO-FR4.4   | Tracking            | Display tracking information of the order. Show it's current location and show destication point. |
+| PrSO-FR4.3   | Show orders         | List in-progress and completed orders       |
+| PrSO-FR4.4   | Tracking            | Display tracking information of the order. Show it's current location and show destication point |
 |              |                     |                                             |
 | PrSO-FR5     | **Product management** |                                          |
 | PrSO-FR5.1   | Manage products     | Create/update/delete products, assign category, change the amount in stock |
@@ -201,8 +204,8 @@ The following table summarizes the functional requirements for the ProjectSO sho
 | PrSO-FR6.1   | Handle user order   | Accept/decline order, change its progress   |
 |              |                     |                                             |
 | PrSO-FR7     | **Courier management** |                                          |
-| PrSO-FR7.1   | Manage couriers     | Create/delete couriers.                     |
-| PrSO-FR7.1   | Courier arbitration | The system should analyze the current active couriers and evenly distribute load between them. |
+| PrSO-FR7.1   | Manage couriers     | Create/delete couriers                      |
+| PrSO-FR7.1   | Courier arbitration | The system should analyze the current active couriers and evenly distribute load between them |
 
 The following table summarizes the functional requirements for the ProjectSO courier mobile application.
 
@@ -212,7 +215,7 @@ The following table summarizes the functional requirements for the ProjectSO cou
 | PrSO-C-FR1.1   | Login               | Authenticate courier through his email+password combination |
 | PrSO-C-FR1.2   | Forgot password     | Make it possible for the courier to change his password when he forgot it |
 | PrSO-C-FR1.3   | Receive delivery request | The courier should receive delivery task with details about pick-up point and delivery address |
-| PrSO-C-FR1.4   | Track courier location | The system should actively collect the couriers location and store it in the system in order to report the status to the user. |
+| PrSO-C-FR1.4   | Track courier location | The system should actively collect the couriers location and store it in the system in order to report the status to the user  |
 
 ### 3.3 Quality of Service
 > This section states additional, quality-related property requirements that the functional effects of the software should present.
@@ -263,6 +266,41 @@ Specify schedule for delivery of the software product.
 
 #### 3.5.8 Proof of Concept
 <!-- TODO: come up with a description -->
+
+### 3.6 Non-functional requirements
+
+#### 3.6.1 System requirements
+
+System requirements for the shop application:
+
+| Req. No.     | Title               | Description                                 |
+| ------------ | ------------------- | ------------------------------------------- |
+| PrSO-SYS1    | Web based           | The shop application should be web based    |
+| PrSO-SYS2    | Browser support     |                                             |
+| PrSO-SYS2.1  | IE Edge             | IE Edge v16 or later                        |
+| PrSO-SYS2.2  | Firefox             | Firefox v52 or later                        |
+| PrSO-SYS2.3  | Chrome              | Chrome v57 or later                         |
+| PrSO-SYS2.4  | Safari              | Safari v11 or later                         |
+| PrSO-SYS2.5  | Opera               | Opera v44 or later                          |
+
+System requirements for the courier application:
+
+| Req. No.     | Title               | Description                                 |
+| ------------ | ------------------- | ------------------------------------------- |
+| PrSO-SYS3    | Phone app           | The courier application should be a phone app |
+| PrSO-SYS4    | Phone OS support    |                                             |
+| PrSO-SYS4.1  | Android             | Android 12 and higher (API level 31)        |
+| PrSO-SYS4.2  | iPhone              | iOS 15.0 or later.                          |
+
+#### 3.6.2 Security requirements
+
+The following user security levels are required:
+
+| Req. No.     | Title               | Description                                 |
+| ------------ | ------------------- | ------------------------------------------- |
+| PrSO-SEC1    | User                | View product list; search/filter products; add products to cart; modify cart; make a purchase; monitor order status and tracking; |
+| PrSO-SEC2    | Manager             | View product list; modify product information and mount; accept/decline orders; manage couriers; |
+| PrSO-SEC2    | Courier             | Receive delivery tasks; complete delivery;  |
 
 ## 4. Verification
 > This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
