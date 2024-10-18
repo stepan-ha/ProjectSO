@@ -103,7 +103,6 @@ This Software Requirements Specification (SRS) document outlines the requirement
 This structure aims to facilitate a comprehensive understanding of the system, ensuring that all stakeholders are aligned on the project objectives and requirements.
 
 ## 2. Product Overview
-> This section should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3, and makes them easier to understand.
 
 ### 2.1 Product Perspective
 Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
@@ -131,9 +130,7 @@ Apportion the software requirements to software elements. For requirements that 
 Identify requirements that may be delayed until future versions of the system (e.g., blocks and/or increments).
 
 ## 3. Requirements
-> This section specifies the software product's requirements. Specify all of the software requirements to a level of detail sufficient to enable designers to design a software system to satisfy those requirements, and to enable testers to test that the software system satisfies those requirements.
 
-> The specific requirements should:
 * Be uniquely identifiable.
 * State the subject of the requirement (e.g., system, software, etc.) and what shall be done.
 * Optionally state the conditions and constraints, if any.
@@ -210,7 +207,6 @@ The following table summarizes the functional requirements for the ProjectSO cou
 | PrSO-C-FR1.4   | Track courier location | The system should actively collect the couriers location and store it in the system in order to report the status to the user  |
 
 ### 3.3 Quality of Service
-> This section states additional, quality-related property requirements that the functional effects of the software should present.
 
 #### 3.3.1 Performance
 If there are performance requirements for the product under various circumstances, state them here and explain their rationale, to help the developers understand the intent and make suitable design choices. Specify the timing relationships for real time systems. Make such requirements as specific as possible. You may need to state performance requirements for individual functional requirements or features.
@@ -245,7 +241,7 @@ Constraints on software components to fit the geographically distributed structu
 Specify attributes of software that relate to the ease of maintenance of the software itself. These may include requirements for certain modularity, interfaces, or complexity limitation. Requirements should not be placed here just because they are thought to be good design practices.
 
 #### 3.5.4 Reusability
-<!-- TODO: come up with a description -->
+
 
 #### 3.5.5 Portability
 Specify attributes of software that relate to the ease of porting the software to other host machines and/or operating systems.
@@ -257,7 +253,6 @@ Specify monetary cost of the software product.
 Specify schedule for delivery of the software product.
 
 #### 3.5.8 Proof of Concept
-<!-- TODO: come up with a description -->
 
 ### 3.6 Non-functional requirements
 
@@ -295,9 +290,7 @@ The following user security levels are required:
 | PrSO-SEC2    | Courier             | Receive delivery tasks; complete delivery;  |
 
 ## 4. Verification
-> This section provides the verification approaches and methods planned to qualify the software. The information items for verification are recommended to be given in a parallel manner with the requirement items in Section 3. The purpose of the verification process is to provide objective evidence that a system or system element fulfills its specified requirements and characteristics.
 
-<!-- TODO: give more guidance, similar to section 3 -->
-<!-- ieee 15288:2015 -->
+
 
 ## 5. Appendixes
