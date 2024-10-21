@@ -46,6 +46,9 @@ Table of Contents
   * 3.6 [Non-functional](#36-non-functional-requirements)
     * 3.6.1 [System requirements](#361-system-requirements)
     * 3.6.2 [Security requirements](#362-security-requirements)
+  * 3.7 [Non-functional](#37-use-case-diagrams)
+    * 3.7.1 [Security requirements](#371-user-auth-diagram)
+    * 3.7.2 [Security requirements](#372-user-activity-diagram)
 * 4 [Verification](#4-verification)
 * 5 [Appendixes](#5-appendixes)
 
@@ -315,10 +318,6 @@ The Administrator has full access to the application. His role is to manage the 
 
 The Courier is responsible for order delivery. He is responsible for monitoring his application for new order norifications, accepts the orders and deliver them.
 
-
-![Activity_Actors](https://github.com/user-attachments/assets/4ca16183-b2c0-45d3-b039-af71dff4e90e)
-
-
 ### 3.2 Functional
 
 The following table summarizes the functional requirements for the ProjectSO shop web application.
@@ -343,13 +342,6 @@ The following table summarizes the functional requirements for the ProjectSO sho
 | PrSO-FR3.7   | Change password     | Allow the user to change his password       |
 | PrSO-FR3.8   | Delete account and data | Delete account and any personal data that is linked to this account |
 |              |                     |                                             |
-
-
-![Activity_UserState](https://github.com/user-attachments/assets/b3e0280e-f665-4f78-87e3-b4da04921f27)
-
-
-| Req. No.     | Title               | Description                                 |
-| ------------ | ------------------- | ------------------------------------------- |
 | PrSO-FR4     | **Order** |                                                       |
 | PrSO-FR4.1   | Create order        | Create order based on the cart's content and pass it to the manager/admin for further processing |
 | PrSO-FR4.2   | Cancel order        | Allow the user to cancel his order          |
@@ -459,6 +451,16 @@ The following user security levels are required:
 | PrSO-SEC1    | User                | View product list; search/filter products; add products to cart; modify cart; make a purchase; monitor order status and tracking; |
 | PrSO-SEC2    | Admin               | View product list; modify product information and mount; accept/decline orders; manage couriers; |
 | PrSO-SEC2    | Courier             | Receive delivery tasks; complete delivery;  |
+
+### 3.7 Use Case Diagrams
+
+#### 3.7.1 User Auth Diagram
+
+![Activity_UserState](https://github.com/user-attachments/assets/b3e0280e-f665-4f78-87e3-b4da04921f27)
+
+#### 3.7.2 User Activity Diagram
+
+![Activity_Actors](https://github.com/user-attachments/assets/4ca16183-b2c0-45d3-b039-af71dff4e90e)
 
 ## 4. Verification
 
