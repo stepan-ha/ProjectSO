@@ -46,9 +46,9 @@ Table of Contents
   * 3.6 [Non-functional](#36-non-functional-requirements)
     * 3.6.1 [System requirements](#361-system-requirements)
     * 3.6.2 [Security requirements](#362-security-requirements)
-  * 3.7 [Non-functional](#37-use-case-diagrams)
-    * 3.7.1 [Security requirements](#371-user-auth-diagram)
-    * 3.7.2 [Security requirements](#372-user-activity-diagram)
+  * 3.7 [Use Case Diagrams](#37-use-case-diagrams)
+    * 3.7.1 [User Auth Diagram](#371-user-auth-diagram)
+    * 3.7.2 [User Activity Diagram](#372-user-activity-diagram)
 * 4 [Verification](#4-verification)
 * 5 [Appendixes](#5-appendixes)
 
