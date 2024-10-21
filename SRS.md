@@ -115,6 +115,9 @@ The product consists of two main components:
 
 The Internet Shop system integrates with Salesforce through an API, allowing seamless data flow between the web application, desktop application, and Salesforce CRM. This integration ensures that customer data, order details, and inventory updates are consistent across all platforms. Additionally, the system connects to a Map API to enable real-time order tracking for users.
 
+![Architecture](https://github.com/user-attachments/assets/f5de323e-0b7e-4065-b064-f6d4166739ba)
+
+
 ### 2.2 Product Functions
 
 The Internet Shop system is designed to deliver a smooth and efficient online shopping experience, along with backend tools for managing orders, inventory, and customer interactions. The major functions of the system are:
