@@ -316,6 +316,9 @@ The Administrator has full access to the application. His role is to manage the 
 The Courier is responsible for order delivery. He is responsible for monitoring his application for new order norifications, accepts the orders and deliver them.
 
 
+![Activity_Actors](https://github.com/user-attachments/assets/4ca16183-b2c0-45d3-b039-af71dff4e90e)
+
+
 ### 3.2 Functional
 
 The following table summarizes the functional requirements for the ProjectSO shop web application.
@@ -340,6 +343,13 @@ The following table summarizes the functional requirements for the ProjectSO sho
 | PrSO-FR3.7   | Change password     | Allow the user to change his password       |
 | PrSO-FR3.8   | Delete account and data | Delete account and any personal data that is linked to this account |
 |              |                     |                                             |
+
+
+![Activity_UserState](https://github.com/user-attachments/assets/b3e0280e-f665-4f78-87e3-b4da04921f27)
+
+
+| Req. No.     | Title               | Description                                 |
+| ------------ | ------------------- | ------------------------------------------- |
 | PrSO-FR4     | **Order** |                                                       |
 | PrSO-FR4.1   | Create order        | Create order based on the cart's content and pass it to the manager/admin for further processing |
 | PrSO-FR4.2   | Cancel order        | Allow the user to cancel his order          |
