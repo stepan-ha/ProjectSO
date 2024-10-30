@@ -1,0 +1,149 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" version="24.8.3">
+  <diagram name="Page-1" id="_DITeh82ucniZUk8A9B0">
+    <mxGraphModel dx="953" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XO1XCfnKsckobuEIrRQD-1" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" parent="1" vertex="1">
+          <mxGeometry x="170" y="120" width="20" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-2" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="XO1XCfnKsckobuEIrRQD-1" vertex="1">
+          <mxGeometry x="5" y="70" width="10" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-5" value="Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="270" y="120" width="100" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-6" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="XO1XCfnKsckobuEIrRQD-5" vertex="1">
+          <mxGeometry x="45" y="70" width="10" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-7" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="430" y="120" width="100" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-8" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="XO1XCfnKsckobuEIrRQD-7" vertex="1">
+          <mxGeometry x="45" y="70" width="10" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-9" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Forgot password&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="184.99999999999994" y="214.00000000000006" as="sourcePoint" />
+            <mxPoint x="315" y="214" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-11" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Get user info by email&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="224.00000000000006" as="sourcePoint" />
+            <mxPoint x="475" y="224.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-21" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Return success&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;curved=0;rounded=0;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="315" y="356" as="sourcePoint" />
+            <mxPoint x="184.99999999999994" y="356" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XO1XCfnKsckobuEIrRQD-24" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Send &quot;forgot password&quot;&lt;/font&gt;&lt;div style=&quot;line-height: 60%; font-size: 7px;&quot;&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;email with one-time token&lt;/font&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" edge="1">
+          <mxGeometry x="0.1262" y="-50" width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="287.28" as="sourcePoint" />
+            <mxPoint x="325" y="300.00000000000006" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="287" />
+              <mxPoint x="370" y="300" />
+            </Array>
+            <mxPoint x="50" y="50" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-1" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Return user info or null if not found&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="241" as="sourcePoint" />
+            <mxPoint x="325" y="241" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-2" value="if" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=32;height=24;" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="420" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-4" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;[User found]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="113" y="294" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-6" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;In case email is not found do nothing but still send &quot;success&quot;. This is to not make it possible to check if email is registered in the system or not.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.999;entryY=0.536;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;dashed=1;" edge="1" parent="1" source="23rObusM_GmpNE3xPCka-6" target="23rObusM_GmpNE3xPCka-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-8" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Follow &quot;reset password&quot; link&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="184.99999999999994" y="429.00000000000006" as="sourcePoint" />
+            <mxPoint x="315" y="429" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-9" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Get one-time token information&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="443.00000000000006" as="sourcePoint" />
+            <mxPoint x="475" y="443.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-10" value="if-else" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=47;height=25;" vertex="1" parent="1">
+          <mxGeometry x="113" y="522" width="420" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-11" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;[Token valid]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="113" y="538" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-13" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Return token create date&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="474" y="459" as="sourcePoint" />
+            <mxPoint x="324" y="459" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-14" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Send new password&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="184.99999999999994" y="544" as="sourcePoint" />
+            <mxPoint x="315" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-15" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Update password&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="550" as="sourcePoint" />
+            <mxPoint x="475" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-16" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Delete/invalidate token&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="567" as="sourcePoint" />
+            <mxPoint x="475" y="567" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-17" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Return success&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="315" y="586" as="sourcePoint" />
+            <mxPoint x="184.99999999999994" y="586" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-18" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.518;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.994;entryY=0.525;entryDx=0;entryDy=0;entryPerimeter=0;dashPattern=8 8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="113" y="607.628" as="sourcePoint" />
+            <mxPoint x="530.48" y="608.65" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-19" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;[Token expired]&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="108" y="608" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-20" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Return expired token error&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;curved=0;rounded=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="315" y="639" as="sourcePoint" />
+            <mxPoint x="184.99999999999994" y="639" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23rObusM_GmpNE3xPCka-21" value="&lt;span style=&quot;font-size: 7px;&quot;&gt;Verify token expiration date&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1">
+          <mxGeometry x="0.1262" y="-50" width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="480.28" as="sourcePoint" />
+            <mxPoint x="325" y="493.00000000000006" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="480" />
+              <mxPoint x="370" y="493" />
+            </Array>
+            <mxPoint x="50" y="50" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
