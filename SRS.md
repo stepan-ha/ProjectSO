@@ -464,6 +464,4 @@ The following user security levels are required:
 
 ## 4. Verification
 
-
-
 ## 5. Appendixes
