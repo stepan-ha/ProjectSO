@@ -27,3 +27,4 @@ Project documentation files:
 * [Threat Model Diagram and Mitigation](ThreatModelAndMitigation.md)
 * [Deployment model](DeploymentModel.md)
 * [Functional metrics](FuncMetrics.md)
+* [Monitoring metrics](MonitoringMetrics.md)
