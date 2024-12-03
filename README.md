@@ -26,3 +26,4 @@ Project documentation files:
 * [Resiliency](Resiliency.md)
 * [Threat Model Diagram and Mitigation](ThreatModelAndMitigation.md)
 * [Deployment model](DeploymentModel.md)
+* [Functional metrics](FuncMetrics.md)
