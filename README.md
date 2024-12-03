@@ -25,3 +25,4 @@ Project documentation files:
 * [Data model](DataModel.md)
 * [Resiliency](Resiliency.md)
 * [Threat Model Diagram and Mitigation](ThreatModelAndMitigation.md)
+* [Deployment model](DeploymentModel.md)
