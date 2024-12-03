@@ -24,3 +24,4 @@ Project documentation files:
 * [Concurrency (Code) flows](FLOWS.md)
 * [Data model](DataModel.md)
 * [Resiliency](Resiliency.md)
+* [Threat Model Diagram and Mitigation](ThreatModelAndMitigation.md)
