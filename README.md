@@ -23,3 +23,4 @@ Project documentation files:
 * [Software Requirements Specification](SRS.md)
 * [Concurrency (Code) flows](FLOWS.md)
 * [Data model](DataModel.md)
+* [Resiliency](Resiliency.md)
