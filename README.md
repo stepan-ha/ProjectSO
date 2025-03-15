@@ -12,19 +12,6 @@ The product is an Internet Shop that features a user-friendly website and a desk
 * Salesforce Integration: The system connects with Salesforce through an API, ensuring seamless management of customer data, order processing, and inventory tracking.
 * User Accounts: Customers can create and manage their accounts to view order history, manage payment methods, and save preferences.
 
-## High-level architecture
+## Project Documentation
 
-![High-level architecute](Diagrams/Architecture.png)
-
-## Documentation
-
-Project documentation files:
-
-* [Software Requirements Specification](SRS.md)
-* [Concurrency (Code) flows](FLOWS.md)
-* [Data model](DataModel.md)
-* [Resiliency](Resiliency.md)
-* [Threat Model Diagram and Mitigation](ThreatModelAndMitigation.md)
-* [Deployment model](DeploymentModel.md)
-* [Functional metrics](FuncMetrics.md)
-* [Monitoring metrics](MonitoringMetrics.md)
+See project documentation in [Documentation](Documentation/) sub-folder.
