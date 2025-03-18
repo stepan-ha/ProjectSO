@@ -16,3 +16,4 @@ Detailed information on specific topics about the project can be found here:
 * [Deployment model](DeploymentModel.md)
 * [Functional metrics](FuncMetrics.md)
 * [Monitoring metrics](MonitoringMetrics.md)
+* [Project Charter](ProjectCharter.md)
