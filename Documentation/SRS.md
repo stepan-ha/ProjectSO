@@ -357,7 +357,7 @@ The following table summarizes the functional requirements for the ProjectSO sho
 |              |                     |                                             |
 | PrSO-FR7     | **Courier management** |                                          |
 | PrSO-FR7.1   | Manage couriers     | Create/delete couriers                      |
-| PrSO-FR7.1   | Courier arbitration | The system should analyze the current active couriers and evenly distribute load between them |
+| PrSO-FR7.2   | Courier arbitration | The system should analyze the current active couriers and evenly distribute load between them |
 
 The following table summarizes the functional requirements for the ProjectSO courier mobile application.
 
