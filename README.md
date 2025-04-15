@@ -1,7 +1,7 @@
 # ProjectSO
 
-Please go to project [Wiki](/wiki) to find links to important resources like
-wireframes, documentation, project board, etc.
+**📋Task Board:** [ProjectSO](https://github.com/users/stepan-ha/projects/2/views/8)<br>
+**📐Wireframe:** [Figma](https://www.figma.com/proto/a66wX2RfOGrkB1VX4RBylG/Wireframing-in-Figma?node-id=111-3175&starting-point-node-id=111%3A3306&t=ae2IEtsGnIGkQDI2-1)
 
 ## Description
 
