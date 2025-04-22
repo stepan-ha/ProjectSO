@@ -38,4 +38,8 @@
       "eslint"
     ]
   }
+  "overrides": {
+      "@typescript-eslint/parser": "7.17.0",
+      "@typescript-eslint/eslint-plugin": "7.17.0"
+  }
 }
