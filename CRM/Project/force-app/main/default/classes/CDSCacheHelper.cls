@@ -13,6 +13,7 @@ public class CDSCacheHelper {
         List<Participantrole> paticipantRoles = [SELECT ID, DeveloperName FROM ParticipantRole WHERE IsActive = true];
         for (Participantrole role: paticipantRoles) {
             PARTICIPANT_ROLE_NAME_TO_ID.put(role.DeveloperName, role.ID);
+
         }
         
         // Caching participant groups

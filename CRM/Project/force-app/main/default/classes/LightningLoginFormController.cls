@@ -26,6 +26,7 @@ global class LightningLoginFormController {
     public static Boolean getIsSelfRegistrationEnabled() {
         Auth.AuthConfiguration authConfig = getAuthConfig();
         return authConfig.getSelfRegistrationEnabled();
+
     }
 
     @AuraEnabled

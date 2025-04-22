@@ -20,8 +20,8 @@ jobs:
               with:
                 node-version: 20
 
-            - name: Verify Node.js version
-              run: node -v
+            - name: Verify Node.js version and upgrade npm
+              run: npm install -g npm
 
             - name: 'Checkout source code'
               uses: actions/checkout@v3
@@ -48,7 +48,6 @@ jobs:
 
             - name: 'Installing SFDX scanner'
               run: sfdx plugins:install @salesforce/sfdx-scanner
-
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
