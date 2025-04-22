@@ -9,7 +9,7 @@ on:
       # when changing non-salesforce files (like this yml file).
       paths:
         - 'CRM/Project/force-app/**'
-            
+
 jobs:
     validate-deployment-on-dev-org:
         runs-on: ubuntu-latest
@@ -17,9 +17,12 @@ jobs:
 
         steps:
 
-            - uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
-                node-version: '18.18.0'
+                node-version: '18.18.0' # Specify the exact Node.js version required
+
+            - name: Verify Node.js version
+              run: node -v
 
             - name: 'Checkout source code'
               uses: actions/checkout@v3
