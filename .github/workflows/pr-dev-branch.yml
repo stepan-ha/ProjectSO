@@ -8,66 +8,83 @@ on:
       - 'CRM/Project/force-app/**'
 
 jobs:
-  validate-deployment-on-dev-org:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    validate-deployment-on-dev-org:
+        runs-on: ubuntu-latest
+        if: ${{ github.actor != 'dependabot[bot]' }}
 
-    steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18.18.0'
+        steps:
+              uses: actions/setup-node@v4
+              with:
+                node-version: '18.18.0' # Specify the exact Node.js version required
 
-      - name: Verify Node.js version
-        run: node -v
+            - name: Verify Node.js version
+              run: node -v
 
-      - name: 'Checkout source code'
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+            - name: Verify NodeJS
+              run: node --version
 
-      - name: 'Install Salesforce CLI'
-        run: |
-          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-          mkdir ~/sfdx
-          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
-          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
-          ~/sfdx/bin/sfdx version
+            - name: Checkout source code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
 
-      - name: 'Installing sfdx git delta'
-        run: |
-          echo y | sfdx plugins:install sfdx-git-delta
-          sfdx plugins
+            - name: Install Salesforce CLI
+              run: |
+                  npm install --global @salesforce/cli
+                  sf --version
 
-      - name: 'Installing java'
-        run: |
-          sudo apt-get update
-          sudo apt install default-jdk
+            - name: Install sfdx git delta
+              run: |
+                  echo y | sf plugins install sfdx-git-delta
+                  sf plugins
 
-      - name: 'Installing SFDX scanner'
-        run: sfdx plugins:install @salesforce/sfdx-scanner
+            - name: Install Java
+              run: |
+                  sudo apt-get update
+                  sudo apt install -y default-jdk
 
-      - name: 'Authenticate to Integration Org'
-        run: sfdx auth:sfdxurl:store -f ./CRM/Project/authFile.json -s -a integration
+            - name: Install SFDX scanner
+              run: sf plugins install @salesforce/sfdx-scanner
 
-      - name: 'Create delta packages for new, modified or deleted metadata'
-        run: |
-          mkdir changed-sources
-          sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/
+            - name: Authenticate to Integration Org
+              run: sf org login sfdx-url --sfdx-url-file ./CRM/Project/authFile.json --alias integration --set-default
 
-      - name: 'Scan code'
-        run: |
-          cd changed-sources
-          sfdx scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'
-          cd ..
+            - name: Create delta packages for new, modified or deleted metadata
+              run: |
+                  mkdir changed-sources
+                  sf sgd source delta --to "HEAD" --from "HEAD^" --output-dir changed-sources/ --generate-delta --source-dir CRM/Project/force-app/
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: changed-sources/apexScanResults.sarif
+            - name: Scan code
+              run: |
+                  cd changed-sources
+                  sf scanner run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'
+                  cd ..
 
-      - name: 'Check-only deploy delta changes - run all tests'
-        run: |
-          sfdx force:source:deploy -p "changed-sources/force-app" --checkonly --testlevel RunLocalTests --json
+            - name: Upload SARIF file
+              uses: github/codeql-action/upload-sarif@v3
+              with:
+                  sarif_file: changed-sources/apexScanResults.sarif
 
-      - name: 'Deploy destructive changes (if any)'
-        run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings
+            - name: Check-only deploy delta changes - run all tests
+              working-directory: CRM/Project
+              run: |
+                  ls -al ../../changed-sources
+                  ls -al ../../changed-sources/CRM
+                  ls -al ../../changed-sources/CRM/Project
+                  ls -al ../../changed-sources/CRM/Project/force-app
+                  ls -al ../../changed-sources/destructiveChanges
+                  sf project deploy start \
+                      --source-dir "../../changed-sources/CRM/Project/force-app" \
+                      --dry-run \
+                      --test-level RunLocalTests \
+                      --json
+
+            - name: Deploy destructive changes (if any)
+              working-directory: CRM/Project
+              run: |
+                  if [ -d "../../changed-sources/destructiveChanges" ]; then
+                      sf deploy metadata \
+                          --metadata-dir "../../destructiveChanges" \
+                          --dry-run \
+                          --ignore-warnings
+                  fi
