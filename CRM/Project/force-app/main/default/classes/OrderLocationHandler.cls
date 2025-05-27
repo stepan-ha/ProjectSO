@@ -18,6 +18,8 @@ public class OrderLocationHandler {
              WHERE Id IN :storeIds]
         );
 
+        system.debug('Test');
+
         for (Order ord : orders) {
             if (ord.Location__Latitude__s == null && ord.Location__Longitude__s == null) {
                 Store__c store = storeMap.get(ord.Store2__c);
