@@ -1,15 +1,15 @@
 {
   "status": 0,
   "result": {
-    "id": "00DJ9000000S1XbMAK",
+    "id": "00Dd200000CwMndEAF",
     "apiVersion": "63.0",
-    "accessToken": "00DJ9000000S1Xb!AR0AQCIV3d_EE12wa.7JAhIovGhz_R1NOGAAYZCQz_RSKfjxN2raFaBbZh4KFbZ0mrIZrVy8AOobWwxmWUMIXMP9e7X3fckB",
-    "instanceUrl": "https://elekstov.my.salesforce.com",
-    "username": "stepan.halaiko-zpcx@force.com",
+    "accessToken": "00Dd200000CwMnd!AQEAQB1Umd_blzOan85Gozn1zQpC36fxcUJtDFPQcAOTRGKobG3vSE_QnaY4TrTbwrINQDUYnUPjfT.g3ZoMUwC2epXa5QE9",
+    "instanceUrl": "https://redtag-6f-dev-ed.develop.my.salesforce.com",
+    "username": "stepan.halaiko@moderntech2025.com",
     "clientId": "PlatformCLI",
     "connectedStatus": "Connected",
-    "sfdxAuthUrl": "force://PlatformCLI::5Aep861mDcA8_c_oBrGtJ.Q0EKN1hxm0qoH1UBGm2v5inXgqcXM5kNR5OkSYpjFn0IGEOI6TobULJrkCtDz9yFo@elekstov.my.salesforce.com",
-    "alias": "modernTech"
+    "sfdxAuthUrl": "force://PlatformCLI::5Aep861Jfo34KnkW6LTRB9n3E366E8dcNn4QV7T3UGHxPltqRvq01c54UW5cnnc.ugn2ZGYZ_SyaMkXedMmBUzF@redtag-6f-dev-ed.develop.my.salesforce.com",
+    "alias": "modernTech2"
   },
   "warnings": [
     "This command will expose sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended access and escalation of privilege.\nFor additional information, please review the authorization section of the https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm."
