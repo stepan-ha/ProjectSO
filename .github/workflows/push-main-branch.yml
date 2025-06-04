@@ -6,7 +6,7 @@ on:
     push:
       branches: [ main ]
       paths:
-        - 'force-app/**'
+        - 'CRM/Project/force-app/**'
             
 
 # Jobs to be executed
