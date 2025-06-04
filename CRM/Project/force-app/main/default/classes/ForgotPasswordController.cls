@@ -12,7 +12,7 @@ public with sharing class ForgotPasswordController {
   		pr.setRedirect(true);
   		
   		if (success) {  			
-  			return pr;
+  			return null;
   		}
   		return null;
   	}
